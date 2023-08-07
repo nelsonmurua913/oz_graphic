@@ -1,7 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
 
-module.exports = nextConfig
+module.exports = {
+    ...nextConfig,
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'img.ci.dcd.shared.geniussports.com',
+                port: '',
+                pathname: '/**',
+            },
+        ],
+    },
+}
 
 // const nodeExternals = require('webpack-node-externals');
 
